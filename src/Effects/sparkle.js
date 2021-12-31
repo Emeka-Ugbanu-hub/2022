@@ -1,13 +1,10 @@
 import * as THREE from 'three'
 import React, { useRef, useMemo } from 'react'
-import { extend, useFrame, useThree } from '@react-three/fiber'
-import lerp from 'lerp'
+import { extend, useFrame } from '@react-three/fiber'
 import * as meshline from 'threejs-meshline'
 
 extend(meshline)
-
 const r = () => Math.max(0.2, Math.random())
-
 function Fatline({ curve, width, color, speed }) {
   const material = useRef()
   useFrame(() => (material.current.uniforms.dashOffset.value -= speed))
@@ -18,8 +15,7 @@ function Fatline({ curve, width, color, speed }) {
     </mesh>
   )
 }
-
-export default function Sparks({ mouse, count, colors, radius = 10 }) {
+export default function Sparks({ count, colors, radius = 10 }) {
   const lines = useMemo(
     () =>
       new Array(count).fill().map((_, index) => {
@@ -40,9 +36,6 @@ export default function Sparks({ mouse, count, colors, radius = 10 }) {
   )
 
   const ref = useRef()
-  const { size, viewport } = useThree()
-  const aspect = size.width / viewport.width
- 
 
   return (
     <group ref={ref}>

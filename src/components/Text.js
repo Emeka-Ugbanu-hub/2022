@@ -1,5 +1,4 @@
-import React,{useMemo,Suspense,useRef} from "react";
-import * as THREE from 'three'
+import React,{Suspense,useRef} from "react";
 import Nextyear from "./2022.js";
 
 

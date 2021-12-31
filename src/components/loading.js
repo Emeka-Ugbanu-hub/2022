@@ -2,7 +2,7 @@ import React,{useState,useEffect} from "react";
 
 
 const Loading = () => {
-    const [counter, setCounter] = useState(5);
+    const [counter, setCounter] = useState(10);
     useEffect(() => {
         counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
       }, [counter]);
