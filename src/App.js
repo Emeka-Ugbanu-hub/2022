@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import React,{Suspense,lazy,useEffect,useState} from "react"
 import './App.css';
+import Loading from "./components/loading";
 
+const Home = lazy(() => {
+  return Promise.all([
+        import("./Pages/Home"),
+        new Promise(resolve => setTimeout(resolve, 5000))
+     ])
+
+     .then(([moduleExports]) => moduleExports);
+});
+const Firework = lazy(() => {
+  return Promise.all([
+        import("./Effects/firework"),
+        new Promise(resolve => setTimeout(resolve, 5000))
+     ])
+
+     .then(([moduleExports]) => moduleExports);
+});
 function App() {
+  
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Suspense fallback={<Loading/>}>
+   <Home/>
+   <Firework/> 
+    </Suspense>
+    </>
   );
 }
 
