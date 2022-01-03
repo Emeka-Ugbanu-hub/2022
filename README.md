@@ -2,5 +2,4 @@
 
 VIDEO BELOW:
 
-
-[EMEKA UGBANU 2022](https://j.gifs.com/mqGDon.gif)
+![EMEKA UGBANU 2022](https://j.gifs.com/mqGDon.gif)
