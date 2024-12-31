@@ -24,7 +24,7 @@ function Home() {
           <Year />       
           <Particles count={isMobile ? 5000 : 10000} />       
           <Sparks count={30} colors={['#A2CCB6', '#FCEEB5', '#EE786E', '#e0feff', 'lightpink', 'lightblue']} />       
-          <Effects />    
+        
         </Canvas>    
       </div>    
 
