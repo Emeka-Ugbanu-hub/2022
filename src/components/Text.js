@@ -13,7 +13,7 @@ return(
       <Nextyear
           size={isMobile ? 5 : 8}     
     >
-          2022
+          2025
         </Nextyear>
       
       </group>
