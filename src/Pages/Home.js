@@ -20,8 +20,8 @@ function Home() {
             gl.setClearColor(new THREE.Color('#020207'));     
           }}
         >   
-          <fog attach="fog" args={['white', 50, 190]} />       
-          <pointLight distance={100} intensity={0.5} color="white" />       
+          <fog attach="fog" args={['#FFD7B5', 20, 190]} />       
+          <pointLight distance={100} intensity={0.5} color="#FFD7B5" />       
           <Year />       
           <Particles count={isMobile ? 5000 : 10000} />       
           <Sparks count={30} colors={['#A2CCB6', '#FCEEB5', '#EE786E', '#e0feff', 'lightpink', 'lightblue']} />       
