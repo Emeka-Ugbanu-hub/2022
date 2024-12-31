@@ -22,7 +22,7 @@ export default function Effects() {
       <renderPass attachArray="passes" scene={scene} camera={camera} />
       <waterPass attachArray="passes" factor={1} />
       <glitchPass attachArray="passes" factor={  0  } />
-     <unrealBloomPass attachArray="passes" args={[aspect, 1.0, 1, 0.25]} />
+     <unrealBloomPass attachArray="passes" args={[aspect, 1.5, 1, 0.25]} />
     </effectComposer>
   )
 }
