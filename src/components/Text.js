@@ -10,11 +10,14 @@ return(
     <>
     <Suspense fallback={null}>
       <group ref={ref}>
-      <Nextyear
-          size={isMobile ? 5 : 8}     
-    >
-          2025
-        </Nextyear>
+    <Nextyear  size={isMobile ? 5 : 8}    emissiveIntensity={1}>
+        202
+      </Nextyear>
+     
+      <Nextyear size={isMobile ? 5 : 8}    emissiveIntensity={0.5}>
+        5
+      </Nextyear>
+    
       
       </group>
     </Suspense>
